@@ -28,9 +28,9 @@ while True:
     except KeyError:
         sleep(1)
         continue
-    os.system("convert " + str(cover_art_url) + " -fuzz 15% -trim +repage \
-              \( -clone 0 -resize 177%x100% -blur 0x10 \) +swap -gravity \
-              center -compose over -composite .wp.jpg")
+    os.system("convert " + str(cover_art_url) + " \( -clone 0 -resize \
+              177%x100% -blur 0x10 \) +swap -gravity center -compose over \
+              -composite .wp.jpg")
     os.system("gsettings set org.gnome.desktop.background picture-uri \
               file:////home/umuty/.wp.jpg")
     os.system("gsettings set org.gnome.desktop.screensaver picture-uri \
