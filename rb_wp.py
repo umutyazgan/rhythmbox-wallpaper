@@ -29,7 +29,7 @@ while True:
         sleep(1)
         continue
     os.system("convert " + str(cover_art_url) + " \( -clone 0 -resize \
-              177%x100% -blur 0x10 \) +swap -gravity center -compose over \
+              177%x100% -blur 0x20 \) +swap -gravity center -compose over \
               -composite .wp.jpg")
     os.system("gsettings set org.gnome.desktop.background picture-uri \
               file:////home/umuty/.wp.jpg")
